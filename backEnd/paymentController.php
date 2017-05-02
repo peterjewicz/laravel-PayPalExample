@@ -29,6 +29,14 @@ class paymentController extends Controller
             env('PAYPAL_CLIENTSECRET')  //clientSecret
           )
         );
+
+        // This block sets the app to use paypal production url's
+        // setting 'production' in the js for the front end doesn't work
+        // $this->apiContext->setConfig(
+        //       array(
+        //         'mode' => 'live'
+        //       )
+        // );
     }
 
     public function createPayment(){
